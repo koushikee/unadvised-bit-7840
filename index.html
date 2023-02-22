@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabulous Footwear</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .login{
+            display: flex;
+            width: 60%;
+            margin-left: 40%;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            
+            
+        }
+        .login input{
+            width: 40%;
+            
+        }
+        .logo{
+            width: 20%;
+            
+
+        }
+        .logo img{
+            width: 90%;
+            margin: auto;
+            margin-left: 20% ;
+            margin-top: 20px;
+        }
+        .link{
+            display: flex;
+            justify-content: space-between;
+        }
+        .link a{
+           margin: auto;
+        }
+        .nav div:nth-child(2){
+            width: 90%;
+            margin-left: 10%;
+        }
+        /* .burger-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 10px;
+        }
+        .burger-menu a {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .burger-button {
+            display: none;
+            cursor: pointer;
+        } */
+        .scrolled {
+            background-color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            z-index: 1;
+        }
+        .discount{
+            display: flex;
+            width: 90%;
+border: 1px solid red;
+margin: auto;
+        }
+        .discount img{
+width: 23%;
+margin: auto;
+        }
+        .midvdopic{
+            display: flex;
+            width: 93%;
+            margin: auto;
+            border: 1px solid red;
+        }
+        .midvdopic img{
+            width: 50%;
+        }
+        .upto30off{
+            display: flex;
+            width: 90%;
+            margin: auto;
+
+        }
+        .upto30off img{
+            width: 50%;
+        }
+        .newarrival{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin: auto;
+            border: 1px solid red;
+        }
+        .newarrival img{
+            width: 100%;
+        }
+        .bestdeals{
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin: auto;
+            border: 1px solid red;
+           
+        }
+        .bestdeals img{
+            width: 80%;
+            margin: auto;
+        }
+        .artmeantworking{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: auto;
+            border: 1px solid red;
+        }
+        .artmeantworking img{
+            width: 100%;
+        }
+        /* media query for burger menu */
+        @media only screen and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .link {
+                flex-direction: column;
+            }
+            .link a {
+                margin: 10px 0;
+            }
+            .login {
+                width: 100%;
+                margin: 20px 0;
+                justify-content: space-between;
+            }
+            .login input {
+                width: 60%;
+            }
+            .newarrival{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: auto;
+            border: 1px solid red;
+        }
+        .upto30off{
+            display: flex;
+            width: 90%;
+            margin-left: 27%;
+            flex-direction: column;
+        }
+        .bestdeals{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: auto;
+            border: 1px solid red;
+        }
+        .artmeantworking{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            margin: auto;
+            border: 1px solid red;
+        }
+    }
+        /* CSS class for scrolling */
+       
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="logo">
+            <img src="./project logo.png" alt=""/>
+        </div>
+        <div>
+            <div class="login">
+                <input  type="text" placeholder="Find Something Fabulous For You">
+                
+                <p>log in</p>
+                <p>wishlist</p>
+                <p>cart</p>
+            </div>
+            <div class="link">
+                <a href="">New & Now</a>
+                <a href="">Women</a>
+                <a href="">Men</a>
+                <a href="">Kids</a>
+                <a href="">Brands</a>
+                <a href="">Accessories</a>
+                <a href="">Sale</a>
+                <a href="">Your offer</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <a style="margin-left: 10%;" href="">Locate store</a>
+    <br>
+    <br>
+    <div class="discount">
+        <img src="./dis40.png" alt="error">
+        <img src="./dis25.png" alt="">
+        <img src="./dis30.png" alt="">
+        <img src="./dis70.png" alt="">
+    </div>
+    <br>
+    <br>
+    <div class="midvdopic">
+        <img src="./pic1.png" alt="">
+        <img src="./pic1.png" alt="">
+    </div>
+    <br>
+    <h1 style="text-align: center;">Famous for Converse</h1>
+    <h4 style="text-align: center; color:rgb(102, 92, 92)">Elevate your sneaker style with trendy and iconic favorites</h4>
+    <a href=""><span style="font-size: 20px;margin-left: 43%;color: black;">SHOP CONVERSE</span></a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="upto30off">
+        <img src="./upto30off.png" alt="">
+        <img src="./shopthesale.png" alt="">
+    </div>
+    <br>
+    <h1 style="text-align: center;">Shope by Category</h1>
+    <br>
+    <div class="newarrival">
+        <img src="./newarrival.png" alt="">
+        <img src="./courtsneakers.png" alt="">
+        <img src="./blockheelsandals.png" alt="">
+        <img src="./footbedsandals.png" alt="">
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="upto30off">
+        <img src="./upto70off.png" alt="">
+        <img src="./shopnow.png" alt="">
+    </div>
+    <h1 style="text-align: center;">Can't Miss Deals</h1>
+    <div class="bestdeals">
+        <img src="./upto40kids.png" alt="">
+        <img src="./upto30athletics.png" alt="">
+        <img src="./upto25crocs.png" alt="">
+        <img src="./sandals40.png" alt="">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+<div  class="artmeantworking">
+    <div>
+        <img src="./artmeantworking.png" alt="">
+    </div>
+    <div>
+<img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/homepage/2023/spring/1-story/wk4_022123_hp_experience_1_bhm.gif" alt="">
+    </div>
+</div>
+<br>
+<h4 style="text-align: center;width: 90%;margin: auto;color: rgb(100, 78, 78);">Follow us <span><a style="color: black;"href="">@fabulousfootwear</a></span> to see their creative twists on our shoes throught the month</h4>
+</body>
+
+</html>

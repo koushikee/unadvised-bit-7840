@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <style>
+      /* Write all necessery css here  */
+      #product-container {
+        /* border: 2px solid red; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+      #product-container > div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+      }
+      #product-container > div > img {
+        width: 100%;
+        height: 200px;
+      }
+      #product-container > div > button {
+        display: block;
+        margin: auto;
+        border: none;
+        background-color: aqua;
+        height: 25px;
+      }
+
+      #filter {
+        display: block;
+        margin: auto;
+        font-size: 15px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        border-color: blue;
+      }
+      *{
+            box-sizing: border-box;
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .login{
+            display: flex;
+            width: 60%;
+            margin-left: 40%;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            
+            
+        }
+        .login input{
+            width: 40%;
+            
+        }
+        .logo{
+            width: 20%;
+            
+
+        }
+        .logo img{
+            width: 90%;
+            margin: auto;
+            margin-left: 20% ;
+            margin-top: 20px;
+        }
+        .link{
+            display: flex;
+            justify-content: space-between;
+        }
+        .link a{
+           margin: auto;
+        }
+        .nav div:nth-child(2){
+            width: 90%;
+            margin-left: 10%;
+        }
+        .pro-container{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            border: 1px solid;
+        }
+        .pro-container div h5{
+            color: rgb(105, 86, 86);
+        }
+      @media only screen and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .link {
+                flex-direction: column;
+            }
+            .link a {
+                margin: 10px 0;
+            }
+            .login {
+                width: 100%;
+                margin: 20px 0;
+                justify-content: space-between;
+            }
+            .login input {
+                width: 60%;
+            }
+            #product-container {
+        /* border: 2px solid red; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+      }
+        }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+        <div class="logo">
+            <img src="./project logo.png" alt=""/>
+        </div>
+        <div>
+            <div class="login">
+                <input  type="text" placeholder="Find Something Fabulous For You">
+                
+                <a href="">log in</a>
+                <a href="./index.html">wishlist</a>
+                <a href="./cart.html">cart</a>
+            </div>
+            <div class="link">
+                <a href="">New & Now</a>
+                <a href="">Women</a>
+                <a href="">Men</a>
+                <a href="">Kids</a>
+                <a href="">Brands</a>
+                <a href="">Accessories</a>
+                <a href="">Sale</a>
+                <a href="">Your offer</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- Use this Select Tag for Filtering the Products  -->
+    <div class="pro-container">
+        <div>
+            <h1 style="text-align: center;color: blueviolet;">Shoes</h1>
+
+            <select id="filter">
+                <option value="">Filter By Category</option>
+                <option value="womens-shoes">womens-shoes</option>
+                <option value="mens-shoes">mens-shoes</option>
+              </select>
+              <h3>Category</h3>
+              <h5>Boat Shoes</h5>
+              <h5>Boats</h5>
+              <h5>Clogs and Mules</h5>
+              <h5>Loafers and Oxfords</h5>
+              <h5>Sandals</h5>
+              <h5>Slippers</h5>
+              <h5>Sneakers and Athletic Shoes</h5>
+              <h5>Work and Safety</h5>
+        </div>
+        
+          <div id="product-container">
+            <!-- Here Append All the Products  -->
+          </div>
+    </div>
+    
+  </body>
+  <script>
+    // Write all necessery JS here 
+    async function FetchData() {
+      try {
+        let res = await fetch("https://dummyjson.com/products/search?q=shoes")
+        res = await res.json();
+        console.log(res.products)
+        FilterData(res.products);
+         
+      } catch (err) {
+        console.log("error", err);
+      }
+    }
+
+    FetchData();
+    let filterby = document.getElementById("filter");
+    filterby.addEventListener("change", () => {
+      FetchData();
+    });
+    function FilterData(products) {
+      if (filterby.value === "") {
+        DisplayData(products);
+      } else {
+        products = products.filter((ele) => {
+          return ele.category == filterby.value;
+        });
+        DisplayData(products);
+      }
+      // console.log("data",data)
+    }
+    let Cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let Container = document.getElementById("product-container");
+    function DisplayData(products) {
+      Container.innerHTML = "";
+      products.forEach((product) => {
+        let Card = document.createElement("div");
+        let Image = document.createElement("img");
+        let title = document.createElement("h2");
+        let description = document.createElement("h4");
+        let Price = document.createElement("h3");
+        let brand = document.createElement("p");
+        let Category = document.createElement("h4");
+        let AddtoCart = document.createElement("button");
+        Image.src = product.thumbnail;
+        title.textContent = product.title;
+        description.textContent = product.description;
+        Price.textContent = `$${product.price}`;
+        brand.textContent = product.brand;
+        Category.textContent = product.category;
+        AddtoCart.textContent = "Add To Cart";
+
+        AddtoCart.addEventListener("click", () => {
+          if (checkDuplicate(product)) {
+            alert("Product Already in Cart");
+          } else {
+            Cart.push({ ...product, quantity: 1 });
+            localStorage.setItem("cart", JSON.stringify(Cart));
+            alert("Product Added To Cart");
+          }
+        });
+
+        Card.append(Image, title, description, Price, brand,Category, AddtoCart);
+        Container.append(Card);
+      });
+
+      console.log("display", products);
+    }
+
+    function checkDuplicate(product) {
+      for (let i = 0; i < Cart.length; i++) {
+        if (Cart[i].id == product.id) {
+          return true;
+        }
+      }
+      return false;
+    }
+  </script>
+</html>

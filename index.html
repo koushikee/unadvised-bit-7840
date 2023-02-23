@@ -140,6 +140,15 @@ margin: auto;
         .artmeantworking img{
             width: 100%;
         }
+        .bellowvdopic{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            border: 1px solid red;
+        }
+        .bellowvdopic img{
+            width: 50%;
+        }
         /* media query for burger menu */
         @media only screen and (max-width: 768px) {
             .nav {
@@ -187,6 +196,12 @@ margin: auto;
             margin: auto;
             border: 1px solid red;
         }
+        .bellowvdopic img:nth-child(2){
+display: none;
+        }
+        .bellowvdopic img:nth-child(1){
+            width: 100%;
+        }
     }
         /* CSS class for scrolling */
        
@@ -201,12 +216,12 @@ margin: auto;
             <div class="login">
                 <input  type="text" placeholder="Find Something Fabulous For You">
                 
-                <p>log in</p>
-                <p>wishlist</p>
-                <p>cart</p>
+                <a href="">log in</a>
+                <a href="./index.html">wishlist</a>
+                <a href="./cart.html">cart</a>
             </div>
             <div class="link">
-                <a href="">New & Now</a>
+                <a href="./product.html">New & Now</a>
                 <a href="">Women</a>
                 <a href="">Men</a>
                 <a href="">Kids</a>
@@ -283,6 +298,38 @@ margin: auto;
 </div>
 <br>
 <h4 style="text-align: center;width: 90%;margin: auto;color: rgb(100, 78, 78);">Follow us <span><a style="color: black;"href="">@fabulousfootwear</a></span> to see their creative twists on our shoes throught the month</h4>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div  class="artmeantworking">
+    <div>
+        <img src="./shoes2.png" alt="">
+        <h2 style="text-align: center;">Style of the Week</h2>
+        <p style="text-align: center;">Treading neutrals + cool retro vives = the perfect sneaker combo</p>
+        <a href=""><span style="font-size: 17px;color: black;margin-left: 30%;">SHOP NIKE WAFFLE DEBUT</span></a>
+    </div>
+    <div>
+<img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/homepage/2023/spring/2-stories/wk4_022123_hp_story_2_b_distortedcrocs.gif" alt="">
+<h2 style="text-align: center;">Turn on the Brights</h2>
+        <p style="text-align: center;">Make every step more fun with bold colors from Crocs</p>
+        <a href=""><span style="font-size: 17px;color: black;margin-left: 40%;">SHOP CROCS</span></a>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<div class="bellowvdopic">
+    <img src="https://www.famousfootwear.com/-/media/project/tenant/famous-footwear/famous-footwear/homepage/2023/spring/1-story/wk3_021223_hp_left_loafers.jpg" alt="">
+    <img src="./dummygirl.png" alt="">
+</div>
+<p style="text-align: center;">The perfect transition shoe from the early spring chill to late spring sunshine</p>
+<a href=""><span style="font-size: 17px;color: black;margin-left: 38%;">SHOP SPRING LOAFERS</span></a>
+<br>
+<br>
+<br>
+<h1 style="text-align: center;">Best Sellers</h1>
 </body>
 
 </html>

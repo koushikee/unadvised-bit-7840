@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabulous Footwear</title>
+    <script src="https://kit.fontawesome.com/9065ee2d35.js" crossorigin="anonymous"></script>
+   
+    
     <style>
         *{
             box-sizing: border-box;
@@ -22,7 +25,7 @@
             margin-left: 40%;
             justify-content: space-around;
             margin-bottom: 20px;
-            
+            margin-top: 10px;
             
         }
         .login input{
@@ -46,6 +49,9 @@
         }
         .link a{
            margin: auto;
+           text-decoration: none;
+           color: purple;
+           margin-top: 30px;
         }
         .nav div:nth-child(2){
             width: 90%;
@@ -83,7 +89,7 @@
         .discount{
             display: flex;
             width: 90%;
-border: 1px solid red;
+
 margin: auto;
         }
         .discount img{
@@ -94,7 +100,6 @@ margin: auto;
             display: flex;
             width: 93%;
             margin: auto;
-            border: 1px solid red;
         }
         .midvdopic img{
             width: 50%;
@@ -113,7 +118,6 @@ margin: auto;
             display: grid;
             grid-template-columns: repeat(4,1fr);
             margin: auto;
-            border: 1px solid red;
         }
         .newarrival img{
             width: 100%;
@@ -123,7 +127,6 @@ margin: auto;
             display: grid;
             grid-template-columns: repeat(4,1fr);
             margin: auto;
-            border: 1px solid red;
            
         }
         .bestdeals img{
@@ -135,7 +138,6 @@ margin: auto;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             margin: auto;
-            border: 1px solid red;
         }
         .artmeantworking img{
             width: 100%;
@@ -144,12 +146,66 @@ margin: auto;
             display: flex;
             width: 90%;
             margin: auto;
-            border: 1px solid red;
         }
         .bellowvdopic img{
             width: 50%;
         }
-        /* media query for burger menu */
+        .footer-contact{
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+        #footer-details{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4,1fr);
+        }
+        #footer-details p{
+            color: rgb(116, 112, 112);
+        }
+        #footer{
+            background-color: whitesmoke;
+            
+        }
+        #footer img{
+display: block;
+margin: auto;
+        }
+        #bestseller{
+            width: 90%;
+            margin: auto;
+        }
+        .wrapper{
+            display: none;
+        }
+        #famousgiftcard{
+            width: 95%;
+            margin: auto;
+        }
+        #famousgiftcard img{
+            width: 100%;
+        }
+        .brands{
+            display: flex;
+            width: 95%;
+            margin: auto;
+        }
+        .brands div:nth-child(1){
+            width: 50%;
+        }
+        .brands div:nth-child(1) img{
+            width: 100%;
+        }
+        .brands div:nth-child(2){
+            width: 50%;
+        }
+        .brands div:nth-child(2) img{
+            width: 100%;
+        }
         @media only screen and (max-width: 768px) {
             .nav {
                 flex-direction: column;
@@ -174,7 +230,6 @@ margin: auto;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             margin: auto;
-            border: 1px solid red;
         }
         .upto30off{
             display: flex;
@@ -187,14 +242,12 @@ margin: auto;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             margin: auto;
-            border: 1px solid red;
         }
         .artmeantworking{
             width: 90%;
             display: grid;
             grid-template-columns: repeat(1,1fr);
             margin: auto;
-            border: 1px solid red;
         }
         .bellowvdopic img:nth-child(2){
 display: none;
@@ -202,6 +255,78 @@ display: none;
         .bellowvdopic img:nth-child(1){
             width: 100%;
         }
+        #footer-details{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .wrapper {
+  display: flex;
+  max-width: 650px;
+  width: 100%;
+  height: 400px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.wrapper i.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 36px;
+  width: 36px;
+  background-color: #343f4f;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.3s linear;
+  z-index: 100;
+  cursor: pointer;
+}
+i.button:active {
+  transform: scale(0.94) translateY(-50%);
+}
+i#prev {
+  left: 25px;
+}
+i#next {
+  right: 25px;
+}
+.image-container {
+  height: 320px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+.image-container .carousel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.carousel img {
+  height: 100%;
+  width: 100%;
+  border-radius: 18px;
+  border: 10px solid #fff;
+  object-fit: cover;
+}
+#bestseller{
+    display: none;
+}
+.brands div:nth-child(1){
+    width:100%;
+}
+.brands div:nth-child(2){
+    display: none;
+}
     }
         /* CSS class for scrolling */
        
@@ -216,9 +341,10 @@ display: none;
             <div class="login">
                 <input  type="text" placeholder="Find Something Fabulous For You">
                 
-                <a href="">log in</a>
-                <a href="./index.html">wishlist</a>
-                <a href="./cart.html">cart</a>
+                
+                    <a href="./signup.html"><i class="fa fa-user"></i></a></i>
+                <a href="./index.html"><i class="fa fa-house"></i></a>
+                <a href="./cart.html"><i class="fa fa-cart-shopping"></i></a>
             </div>
             <div class="link">
                 <a href="./product.html">New & Now</a>
@@ -330,6 +456,200 @@ display: none;
 <br>
 <br>
 <h1 style="text-align: center;">Best Sellers</h1>
-</body>
+<section class="wrapper">
+    <i class="fa-solid fa-arrow-left button" id="prev"></i>
+    <div class="image-container">
+      <div class="carousel">
+        <img src="./birkenstock.png" alt="">
+        <img src="./nike1.png" alt="">
+        <img src="./nike2.png" alt="">
+        <img src="./nike3.png" alt="">
+        <img src="./crocs1.png" alt="">
+        <img src="./birkenstock.png" alt="">
+        <img src="./nike1.png" alt="">
+        <img src="./nike2.png" alt="">
+        <img src="./nike3.png" alt="">
+        <img src="./crocs1.png" alt="">
+        <img src="./birkenstock.png" alt="">
+        <img src="./nike1.png" alt="">
+        <img src="./nike2.png" alt="">
+        <img src="./nike3.png" alt="">
+        <img src="./crocs1.png" alt="">
+      </div>
+      <i class="fa-solid fa-arrow-right button" id="next"></i>
+    </div>
+  </section>
+<div id="bestseller">
+    <img src="./birkenstock.png" alt="">
+    <img src="./nike1.png" alt="">
+    <img src="./nike2.png" alt="">
+    <img src="./nike3.png" alt="">
+    <img src="./crocs1.png" alt="">
+</div>
+<h1 style="text-align: center;">Gotta-Have Brands</h1>
+<div class="brands">
+    <div>
+        <img src="./brand1.png" alt="">
+    </div>
+    <div>
+        <img src="./brand2.png" alt="">
+    </div>
+</div>
+<div id="famousgiftcard">
+    <img src="./famousgiftcard.png" alt="">
+</div>
 
+<!-- <div>
+    <i class="fa-solid fa-arrow-left button" id="previous"></i>
+    <div id = "slideshow"></div>
+    <i class="fa-solid fa-arrow-left button" id="nex"></i>
+</div> -->
+
+<hr style="border:2px solid red">
+<div id="footer">
+    <h4 style="text-align: center;">CONNECT WITH US</h4>
+    <div class="footer-contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+
+    </div>
+    <br>
+    <br>
+    <div id="footer-details">
+        <div>
+            <h5>STORE</h5>
+            <p>Fabulously fast pickup</p>
+            <p>Find A Store</p>
+        </div>
+        <div>
+            <h5>FABOLOUSLY YOU</h5>
+            <p>Sign In/Join Now</p>
+            <p>Learn More</p>
+            <p>Credit Card</p>
+            <p>Mobile App</p>
+            <p>Rewards Terms</p>
+        </div>
+        <div>
+            <h5>HELP</h5>
+            <p>FAQ/Contact Us</p>
+            <p>Shipping & Returns</p>
+            <p>Exclusions</p>
+            <p>Track My Order</p>
+            <p>Gift Cards</p>
+            <p>Shoe Size Carts</p>
+            <p>Zip</p>
+            <p>Unsubscribe from Email</p>
+            <p>Accessibility</p>
+            <p>Do not Sell or Share My Personal Information</p>
+        </div>
+        <div>
+            <h5>ABOUT US</h5>
+            <p>About Us</p>
+            <p>Careers</p>
+            <p>Ticket to Dream</p>
+            <p>Site-Map</p>
+            <p>Eco-Conscious</p>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <img src="./project logo.png" alt="">
+    <h6 style="text-align: center;color:grey">Privacy Policy | Terms & Conditions | Supply Chain Act</h6>
+    <p style="text-align: center;color:grey">©2023 Koushikee</p>
+
+</div>
+</body>
+<script>
+const wrapper = document.querySelector(".wrapper"),
+  carousel = document.querySelector(".carousel"),
+  images = document.querySelectorAll("img"),
+  buttons = document.querySelectorAll(".button");
+
+let imageIndex = 1,
+  intervalId;
+
+
+const autoSlide = () => {
+  
+  intervalId = setInterval(() => slideImage(), 10000);
+};
+
+autoSlide();
+
+
+const slideImage = () => {
+ 
+  imageIndex = imageIndex === images.length ? 0 : imageIndex < 0 ? images.length - 1 : imageIndex;
+  
+  carousel.style.transform = `translate(-${imageIndex * 100}%)`;
+};
+
+
+const updateClick = (e) => {
+ 
+  clearInterval(intervalId);
+  
+  imageIndex += e.target.id === "next" ? 1 : -1;
+  slideImage(imageIndex);
+ 
+  autoSlide();
+};
+
+
+buttons.forEach((button) => button.addEventListener("click", updateClick));
+
+
+wrapper.addEventListener("mouseover", () => clearInterval(intervalId));
+
+wrapper.addEventListener("mouseleave", autoSlide);
+
+
+
+
+
+
+function slideshowFun(images){
+    let slideshow= document.getElementById("slideshow");
+    let image= document.createElement("img");
+    image.setAttribute("src", movieImages[0]);
+    let count=0;
+    let next=document.getElementById("nex")
+    next.addEventListener("click",function(){
+           if(count==movieImages.length-1){
+        count=-1;
+      }
+      
+      count++;
+      image.setAttribute("src", movieImages[count]);
+    })
+    // setInterval(function(){
+    //   if(count==movieImages.length-1){
+    //     count=-1;
+    //   }
+      
+    //   count++;
+    //   image.setAttribute("src", movieImages[count]);
+    // },2000)
+    slideshow.append(image)
+}
+
+
+// Use the following data for slideshow
+var movieImages = [
+  "https://www.themoviedb.org/t/p/w220_and_h330_face/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
+  "https://images.indianexpress.com/2022/06/major-movie-review-1200.jpg",
+  "https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/2607/1062607-h-fa693eabb41d",
+  "https://lumiere-a.akamaihd.net/v1/images/p_aladdin2019_17638_d53b09e6.jpeg",
+  "https://igimages.gumlet.io/hindi/gallery/movies/tubelight/tubelight_poster.jpg?w=160&dpr=2.6"
+]
+
+
+window.addEventListener("load", function () {
+  slideshowFun(movieImages)
+  // add event-listeners;
+});
+</script>
 </html>

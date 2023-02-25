@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart Page</title>
+    <script src="https://kit.fontawesome.com/9065ee2d35.js" crossorigin="anonymous"></script>
     <style>
       /* Write all necessery css here  */
     
@@ -13,7 +14,7 @@
         /* display: grid; */
         /* grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px; */
-        border: 1px solid;
+      
         width: 40%;
       }
       #cart-container > div {
@@ -103,7 +104,7 @@
             margin-left: 40%;
             justify-content: space-around;
             margin-bottom: 20px;
-            
+            margin-top: 10px;
             
         }
         .login input{
@@ -127,6 +128,9 @@
         }
         .link a{
            margin: auto;
+           text-decoration: none;
+           color: purple;
+           margin-top: 30px;
         }
         .nav div:nth-child(2){
             width: 90%;
@@ -135,9 +139,34 @@
         #checkout-cart{
             width: 80%;
             display: flex;
-            border: 1px solid red;
+           
             margin: auto;
             justify-content: space-around;
+        }
+        .footer-contact{
+            width: 50%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+        #footer-details{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4,1fr);
+        }
+        #footer-details p{
+            color: rgb(116, 112, 112);
+        }
+        #footer{
+            background-color: whitesmoke;
+            
+        }
+        #footer img{
+display: block;
+margin: auto;
         }
       @media only screen and (max-width: 768px) {
             .nav {
@@ -175,6 +204,13 @@
         width: 80%;
         margin: auto;
       }
+      #footer-details{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(2,1fr);
+        }
         }
     </style>
   </head>
@@ -187,9 +223,9 @@
             <div class="login">
                 <input  type="text" placeholder="Find Something Fabulous For You">
                 
-                <a href="">log in</a>
-                <a href="./index.html">wishlist</a>
-                <a href="./cart.html">cart</a>
+                <a href="./signup.html"><i class="fa fa-user"></i></a></i>
+                <a href="./index.html"><i class="fa fa-house"></i></a>
+                <a href="./cart.html"><i class="fa fa-cart-shopping"></i></a>
             </div>
             <div class="link">
                 <a href="./product.html">New & Now</a>
@@ -227,6 +263,64 @@
             <a style="margin-left: 33%;color: black;font-size: 20px;" href="./product.html">Continue Shopping</a>
         </div>
     </div>
+    <br>
+    <br>
+    <hr style="border:2px solid red">
+<div id="footer">
+    <h4 style="text-align: center;">CONNECT WITH US</h4>
+    <div class="footer-contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+
+    </div>
+    <br>
+    <br>
+    <div id="footer-details">
+        <div>
+            <h5>STORE</h5>
+            <p>Fabulously fast pickup</p>
+            <p>Find A Store</p>
+        </div>
+        <div>
+            <h5>FABOLOUSLY YOU</h5>
+            <p>Sign In/Join Now</p>
+            <p>Learn More</p>
+            <p>Credit Card</p>
+            <p>Mobile App</p>
+            <p>Rewards Terms</p>
+        </div>
+        <div>
+            <h5>HELP</h5>
+            <p>FAQ/Contact Us</p>
+            <p>Shipping & Returns</p>
+            <p>Exclusions</p>
+            <p>Track My Order</p>
+            <p>Gift Cards</p>
+            <p>Shoe Size Carts</p>
+            <p>Zip</p>
+            <p>Unsubscribe from Email</p>
+            <p>Accessibility</p>
+            <p>Do not Sell or Share My Personal Information</p>
+        </div>
+        <div>
+            <h5>ABOUT US</h5>
+            <p>About Us</p>
+            <p>Careers</p>
+            <p>Ticket to Dream</p>
+            <p>Site-Map</p>
+            <p>Eco-Conscious</p>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <img src="./project logo.png" alt="">
+    <h6 style="text-align: center;color:grey">Privacy Policy | Terms & Conditions | Supply Chain Act</h6>
+    <p style="text-align: center;color:grey">©2023 Koushikee</p>
+
+</div>
   </body>
   <script>
     // Write all necessery JS here 

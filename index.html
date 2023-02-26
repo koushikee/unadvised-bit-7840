@@ -53,6 +53,23 @@
            color: purple;
            margin-top: 30px;
         }
+        .link a:hover,
+        .link a.active{
+            color: rgb(196, 56, 79);
+            width: 70px;
+            height: 40px;
+        }
+    .hamburger {
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #fff;
+}
         .nav div:nth-child(2){
             width: 90%;
             margin-left: 10%;
@@ -214,9 +231,13 @@ margin: auto;
             .link {
                 flex-direction: column;
             }
+            
             .link a {
                 margin: 10px 0;
             }
+            .hamburger {
+        display: block;
+    }
             .login {
                 width: 100%;
                 margin: 20px 0;
@@ -356,6 +377,11 @@ i#next {
                 <a href="">Sale</a>
                 <a href="">Your offer</a>
             </div>
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
     </div>
     <br>
@@ -651,5 +677,12 @@ window.addEventListener("load", function () {
   slideshowFun(movieImages)
   // add event-listeners;
 });
+
+
+hamburger = document.querySelector(".hamburger");
+        nav = document.querySelector("nav");
+        hamburger.onclick = function() {
+            nav.classList.toggle("active");
+        }
 </script>
 </html>
